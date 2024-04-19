@@ -1,0 +1,162 @@
+@font-face{
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Regular.woff2") format("woff2"),
+  url("fonts/OpenSans-Regular.woff") format("woff");
+}
+
+body {
+    /*font-family: cursive;*/
+    font-family: "Open Sans";
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .langSelect,
+  .loginAndEmail,
+  .twoPassword {
+    display: flex;
+    flex-direction: raw;
+    justify-content: center;
+    padding: 10px;
+  }
+  input {
+    display: flex;
+    padding: 10px;
+    border: 2px solid rgb(101, 23, 173);
+    border-radius: 8px;
+    margin: 0 10px 10px 10px;
+    transition: background 1s, box-shadow 0.2s ease-out;
+  }
+  
+  input:focus {
+    background: rgb(252, 160, 255);
+  }
+  input:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  select {
+    margin: 0 0 10px 0;
+    border: 2px solid rgb(101, 23, 173);
+    border-radius: 8px;
+  }
+  .langSelect {
+    margin: 0 0 10px 0;
+  }
+  header {
+    background-color: black;
+    height: 100%;
+    text-align: center;
+  }
+  .title {
+    color: white;
+    animation: rainbow 10s;
+    animation-iteration-count: infinite;
+    font-size: 50px;
+    padding: 20px;
+  }
+  
+  button {
+    padding: 10px;
+    background: rgb(230, 101, 235);
+    border: 2px solid rgb(101, 23, 173);
+    border-radius: 8px;
+    transition: all 0.3s ease-out;
+  }
+  button:hover {
+    transform: scale(1.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .anim-text {
+    font-size: 30px;
+    width: max-content;
+    position: absolute;
+    animation: fly 10s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes fly {
+    0% {
+      left: 0;
+      color: red;
+    }
+    15% {
+      color: rebeccapurple;
+    }
+    30% {
+      color: blue;
+    }
+    50% {
+      left: 100%;
+      transform: translate(-100%, 0);
+      color: skyblue;
+    }
+    60% {
+      color: green;
+    }
+    75% {
+      color: yellow;
+    }
+    100% {
+      left: 0;
+      color: orangered;
+    }
+  }
+  @keyframes rainbow {
+    0% {
+      color: red;
+    }
+    15% {
+      color: rebeccapurple;
+    }
+    30% {
+      color: blue;
+    }
+    45% {
+      color: skyblue;
+    }
+    60% {
+      color: green;
+    }
+    75% {
+      color: yellow;
+    }
+    100% {
+      color: orangered;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    header {
+      background-color: skyblue;
+    }
+    .title {
+      color: black;
+    }
+  }
+  @media only screen and (max-width: 540px) {
+    header {
+      background-color: violet;
+      text-align: left;
+    }
+    .langSelect,
+    .loginAndEmail,
+    .twoPassword {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    header {
+      background-color: red;
+    }
+    .langSelect,
+    .loginAndEmail,
+    .twoPassword {
+      display: block;
+    }
+  }
+  
